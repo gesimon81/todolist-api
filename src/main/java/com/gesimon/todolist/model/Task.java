@@ -1,5 +1,7 @@
 package com.gesimon.todolist.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,6 +19,7 @@ public class Task {
 	
 	private String description;
 	
+    @JsonProperty("isCompleted")  // Force le nom "isCompleted" dans le JSON
 	@Column(name = "ISCOMPLETED")  // Précise le nom exact de la colonne dans H2
 	private boolean isCompleted;
 
