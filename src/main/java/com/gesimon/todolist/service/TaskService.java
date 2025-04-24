@@ -30,4 +30,8 @@ public class TaskService {
 	public void checkData() {
 	    System.out.println("🟢 Nombre de tâches en base : " + taskRepository.count());
 	}
+
+	public Task createTask(Task task) {
+		return taskRepository.save(task);
+	}
 }
